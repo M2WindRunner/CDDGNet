@@ -20,12 +20,12 @@ seaborn
 
 We provide four pre-trained checkpoints for cross-domain change detection. All models use the Siamese Wavelet ResNet18 backbone with the FPN+ASPP+Fuse+Drop neck and were trained for 200 epochs with a batch size of 16.
 
- Source → Target | F1 Score | mIoU | OA | Baidu Netdisk |
+ Source → Target | F1 | mIoU | OA | Baidu Netdisk |
 |---|---|---|---|---|
-| LEVIR-CD → WHU | | | | [Download](https://pan.baidu.com/s/PLACEHOLDER_LEVIR+_to_WHU) |
+| LEVIR-CD → WHU | 80.53 | 67.40 | 98.24 | [Download](https://pan.baidu.com/s/13tZKbeyDa_V1vH2y_YIvLQ?pwd=qcsm) |
 | LEVIR-CD+ → WHU | | | | [Download](https://pan.baidu.com/s/PLACEHOLDER_LEVIR+_to_WHU) |
 | SYSU → CDD | | | | [Download](https://pan.baidu.com/s/PLACEHOLDER_SYSU_to_CDD) |
-| CDD → SYSU | | | | [Download](https://pan.baidu.com/s/PLACEHOLDER_CDD_to_GBF) |
+| CDD → SYSU | 68.79 | 52.43 | 84.67 | [Download](https://pan.baidu.com/s/1eOCuG3-8FY5qFHyOWVFc4A?pwd=f5hm) |
 | CDD → GBF-CD | | | | [Download](https://pan.baidu.com/s/PLACEHOLDER_CDD_to_GBF) |
 | CDD → Yellow | | | | [Download](https://pan.baidu.com/s/PLACEHOLDER_CDD_to_yellow) |
 
