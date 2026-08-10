@@ -18,7 +18,7 @@ seaborn
 ```
 ## Pre-trained Checkpoints
 
-We provide four pre-trained checkpoints for cross-domain change detection. All models use the Siamese Wavelet ResNet18 backbone with the FPN+ASPP+Fuse+Drop neck and were trained for 200 epochs with a batch size of 16.
+We provide the checkpoints of all tasks for cross-domain change detection. 
 
  Source → Target | F1 | mIoU | OA | Baidu Netdisk |
 |---|---|---|---|---|
