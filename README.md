@@ -49,11 +49,9 @@ python eval.py
 
 3. Please determine the optimal settings for the series of hyperparameters in the code based on your specific use case and training environment.
 
-4. Moving forward, I will focus on the development and application of large models in the field of computer vision. Please look forward to my upcoming work ( I am the second author of this paper ) at my new institution.
+4. A bug occurred while uploading the "untils" folder. Please rename the "until" folder in the repository to "utils" and then run the code.
 
-5. A bug occurred while uploading the "untils" folder. Please rename the "until" folder in the repository to "utils" and then run the code.
-
-6. Specific weights are currently being uploaded.
+5. Specific weights are currently being uploaded.
 
 
 
