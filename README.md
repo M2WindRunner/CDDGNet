@@ -26,7 +26,7 @@ We provide the checkpoints of all tasks for cross-domain change detection.
 | LEVIR-CD+ → WHU | | | | [Download](https://pan.baidu.com/s/PLACEHOLDER_LEVIR+_to_WHU) |
 | SYSU → CDD | | | | [Download](https://pan.baidu.com/s/PLACEHOLDER_SYSU_to_CDD) |
 | CDD → SYSU | 68.79 | 52.43 | 84.67 | [Download](https://pan.baidu.com/s/1eOCuG3-8FY5qFHyOWVFc4A?pwd=f5hm) |
-| CDD → GBF-CD | | | | [Download](https://pan.baidu.com/s/PLACEHOLDER_CDD_to_GBF) |
+| CDD → GBF-CD | 49.07 | 32.51 | 93.35 | [Download](https://pan.baidu.com/s/1vJU-FZb32-D8gaw13YJsnw?pwd=hppj) |
 | CDD → Yellow | | | | [Download](https://pan.baidu.com/s/PLACEHOLDER_CDD_to_yellow) |
 
 ## Training
