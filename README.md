@@ -43,7 +43,7 @@ python eval.py
 
 ## Important Notes
 
-1. Since the method described in this paper relies on training small models, the training results tend to be unstable. To ensure stable training, it is recommended to use appropriately constructed pre-trained weights. Preliminary pre-training can be performed following the approach outlined in the paper “SeaMo: A Multi-Seasonal and Multimodal Remote Sensing Foundation Model.” The weights provided above are the results of this pre-training.
+1. Since the method described in this paper relies on training small models, the training results tend to be unstable. To ensure stable training, it is recommended to use appropriately constructed pre-trained weights. Preliminary pre-training can be performed following the approach outlined in the paper 《SeaMo: A Multi-Seasonal and Multimodal Remote Sensing Foundation Model》. The weights provided above are the results of this pre-training.
 
 2. The weights in the repository are the result of retraining following code restructuring; therefore, slight differences from the results reported in the paper are to be expected.
 
