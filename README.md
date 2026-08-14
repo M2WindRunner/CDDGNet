@@ -60,7 +60,7 @@ If you are using the code/model/data provided here in a publication, please cons
 ```bash
 
 @inproceedings{aaai2026CDDGNet,
-  title={Causal decoupling domain generalization for remote sensing change detection},
+  title={Causal Decoupling Domain Generalization for Remote Sensing Change Detection},
   author={Zhao, Jiaqi and Xie, Jianpeng and Zhou, Yong and Du, Wen-Liang and Zhu, Hancheng and Yao, Rui},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
   volume={40},
