@@ -23,11 +23,11 @@ We provide the checkpoints of all tasks for cross-domain change detection.
  Source → Target | F1 | mIoU | OA | Baidu Netdisk |
 |---|---|---|---|---|
 | LEVIR-CD → WHU | 80.53 | 67.40 | 98.24 | [Download](https://pan.baidu.com/s/13tZKbeyDa_V1vH2y_YIvLQ?pwd=qcsm) |
-| LEVIR-CD+ → WHU | | | | [Download](https://pan.baidu.com/s/PLACEHOLDER_LEVIR+_to_WHU) |
-| SYSU → CDD | | | | [Download](https://pan.baidu.com/s/PLACEHOLDER_SYSU_to_CDD) |
+| LEVIR-CD+ → WHU | 82.12 | 69.67 | 98.31 | [Download](https://pan.baidu.com/s/1PJr2Ual5Vw6s9_TlehKKwQ?pwd=p3h3) |
+| SYSU → CDD | 61.58 | 44.49 | 89.80 | [Download](https://pan.baidu.com/s/1tgovIn2eReccFA25lRh0Bw?pwd=7ft7) |
 | CDD → SYSU | 68.79 | 52.43 | 84.67 | [Download](https://pan.baidu.com/s/1eOCuG3-8FY5qFHyOWVFc4A?pwd=f5hm) |
 | CDD → GBF-CD | 49.07 | 32.51 | 93.35 | [Download](https://pan.baidu.com/s/1vJU-FZb32-D8gaw13YJsnw?pwd=hppj) |
-| CDD → Yellow | | | | [Download](https://pan.baidu.com/s/PLACEHOLDER_CDD_to_yellow) |
+| CDD → Yellow | 64.29 | 47.37 | 94.48 | [Download](https://pan.baidu.com/s/10nfOgDoSs--PTmYMHQnODg?pwd=c43v) |
 
 ## Training
 
