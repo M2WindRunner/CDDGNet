@@ -53,8 +53,23 @@ python eval.py
 
 5. Specific weights are currently being uploaded.
 
+## Citation
 
+If you are using the code/model/data provided here in a publication, please consider citing our works:
 
+```bash
+
+@inproceedings{aaai2026CDDGNet,
+  title={Causal decoupling domain generalization for remote sensing change detection},
+  author={Zhao, Jiaqi and Xie, Jianpeng and Zhou, Yong and Du, Wen-Liang and Zhu, Hancheng and Yao, Rui},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={15},
+  pages={13135--13143},
+  year={2026}
+}
+
+```
 
 
 
