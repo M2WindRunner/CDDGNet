@@ -49,9 +49,6 @@ python eval.py
 
 3. Please determine the optimal settings for the series of hyperparameters in the code based on your specific use case and training environment.
 
-4. A bug occurred while uploading the "untils" folder. Please rename the "until" folder in the repository to "utils" and then run the code.
-
-5. Specific weights are currently being uploaded.
 
 ## Citation
 
