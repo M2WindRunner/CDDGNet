@@ -22,12 +22,12 @@ We provide the checkpoints of all tasks for cross-domain change detection.
 
  Source → Target | F1 | mIoU | OA | Baidu Netdisk |
 |---|---|---|---|---|
-| LEVIR-CD → WHU | 80.53 | 67.40 | 98.24 | [Download](https://pan.baidu.com/s/13tZKbeyDa_V1vH2y_YIvLQ?pwd=qcsm) |
-| LEVIR-CD+ → WHU | 82.12 | 69.67 | 98.31 | [Download](https://pan.baidu.com/s/1PJr2Ual5Vw6s9_TlehKKwQ?pwd=p3h3) |
-| SYSU → CDD | 61.58 | 44.49 | 89.80 | [Download](https://pan.baidu.com/s/1tgovIn2eReccFA25lRh0Bw?pwd=7ft7) |
-| CDD → SYSU | 68.79 | 52.43 | 84.67 | [Download](https://pan.baidu.com/s/1eOCuG3-8FY5qFHyOWVFc4A?pwd=f5hm) |
-| CDD → GBF-CD | 49.07 | 32.51 | 93.35 | [Download](https://pan.baidu.com/s/1vJU-FZb32-D8gaw13YJsnw?pwd=hppj) |
-| CDD → Yellow | 64.29 | 47.37 | 94.48 | [Download](https://pan.baidu.com/s/10nfOgDoSs--PTmYMHQnODg?pwd=c43v) |
+| LEVIR-CD → WHU | 79.72 | 66.27 | 98.21 | [Download](https://pan.baidu.com/s/1GR7Jcpx7oGm9siv0ss74og?pwd=6nbm) |
+| LEVIR-CD+ → WHU | 83.05 | 71.01 | 98.46 | [Download](https://pan.baidu.com/s/1VlJhdGAjIehozaIAn_ESvg?pwd=387j) |
+| SYSU → CDD | 60.78 | 43.64 | 89.38 | [Download](https://pan.baidu.com/s/1Mob4NEn76oEUpEjehoe8Sw?pwd=r4nb) |
+| CDD → SYSU | 67.27 | 50.68 | 84.71 | [Download](https://pan.baidu.com/s/1n4FIilh4CRWrEofFSArhbA?pwd=rjyt) |
+| CDD → GBF-CD | 47.29 | 30.96 | 92.56 | [Download](https://pan.baidu.com/s/1HwcH67ov9haV05CEn0TQWg?pwd=k47c) |
+| CDD → Yellow | 67.27 | 50.68 | 95.10 | [Download](https://pan.baidu.com/s/1rCLEd-Uni7QzztswE_aKcA?pwd=vrgk) |
 
 ## Training
 
