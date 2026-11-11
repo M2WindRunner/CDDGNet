@@ -52,7 +52,7 @@ def plot_results(result_paths, save_dir=None, names=None):
             save_dir = result_path.replace(result_path.split(os.sep)[-1], '')
 
         ax = ax.ravel()
-        s = ['lr', 'P', 'R', 'F1', 'mIOU', 'OA', 'best_metric', 'train_loss', 'val_loss']
+        s = ['lr', 'P', 'R', 'F1', 'IoU', 'OA', 'best_metric', 'train_loss', 'val_loss']
         data = np.genfromtxt(result_path, skip_header=1, invalid_raise=False)
         if data.size == 0:
             continue
@@ -155,23 +155,22 @@ def check_eval_dirs():
     return save_path, result_save_path
 
 
-def compute_p_r_f1_miou_oa(tn_fp_fn_tps):
-    p, r, f1, miou, oa = [], [], [], [], []
+def compute_p_r_f1_iou_oa(tn_fp_fn_tps):
+    p, r, f1, iou, oa = [], [], [], [], []
     for tn_fp_fn_tp in tn_fp_fn_tps:
         tn, fp, fn, tp = tn_fp_fn_tp
         p_tmp = tp / (tp + fp)
         r_tmp = tp / (tp + fn)
-        miou_tmp = 0.5 * tp / (tp + fp + fn) + 0.5 * tn / (tn + fp + fn)
-        iou = tp / (tp + fp + fn)
+        iou_tmp = tp / (tp + fp + fn)
         oa_tmp = (tp + tn) / (tp + tn + fp + fn)
 
         p.append(p_tmp)
         r.append(r_tmp)
         f1.append(2 * p_tmp * r_tmp / (r_tmp + p_tmp))
-        miou.append(iou)
+        iou.append(iou_tmp)
         oa.append(oa_tmp)
 
-    return np.array(p), np.array(r), np.array(f1), np.array(miou), np.array(oa)
+    return np.array(p), np.array(r), np.array(f1), np.array(iou), np.array(oa)
 
 
 def get_metrics_offline(gt_dir, pred_dir, dual_label=True):
@@ -209,11 +208,11 @@ def get_metrics_offline(gt_dir, pred_dir, dual_label=True):
             elif i == 1:
                 tn_fp_fn_tp2 += [tn, fp, fn, tp]
     if dual_label:
-        p, r, f1, miou, oa = compute_p_r_f1_miou_oa([tn_fp_fn_tp1, tn_fp_fn_tp2])
+        p, r, f1, iou, oa = compute_p_r_f1_iou_oa([tn_fp_fn_tp1, tn_fp_fn_tp2])
     else:
-        p, r, f1, miou, oa = compute_p_r_f1_miou_oa([tn_fp_fn_tp1])
-    print("P:{}\nR:{}\nF1:{}\nMean F1:{}\nmIOU:{}\nMean mIOU:{}\nOA:{}"
-          .format(p, r, f1, f1.mean(), miou, miou.mean(), oa))
+        p, r, f1, iou, oa = compute_p_r_f1_iou_oa([tn_fp_fn_tp1])
+    print("P:{}\nR:{}\nF1:{}\nMean F1:{}\nIoU:{}\nMean IoU:{}\nOA:{}"
+          .format(p, r, f1, f1.mean(), iou, iou.mean(), oa))
 
 
 def gpu_info():
@@ -278,15 +277,15 @@ class SaveResult:
     def prepare(self):
         with open(self.result_save_path, "w")as f:
             headers = [
-                'epoch', 'lr', 'P', 'R', 'F1', 'mIOU', 'OA', 'best_metric', 'train_loss', 'val_loss', 'de_loss'
+                'epoch', 'lr', 'P', 'R', 'F1', 'IoU', 'OA', 'best_metric', 'train_loss', 'val_loss', 'de_loss'
             ]
             f.write("\t".join(headers) + "\n")
 
-    def show(self, p, r, f1, miou, oa,
+    def show(self, p, r, f1, iou, oa,
              refer_metric=np.array(0), best_metric=0, train_avg_loss=0, val_avg_loss=0, lr=0, epoch=0, exp_loss=0):
         print(
-            "Learning rate:{}  P:{}  R:{}  F1:{}  mIOU:{} OA:{}\nMean reference metric: {} Best metric: {}".format(
-                lr, p, r, f1, miou, oa, round(refer_metric.mean(), 5), round(best_metric, 5)))
+            "Learning rate:{}  P:{}  R:{}  F1:{}  IoU:{} OA:{}\nMean reference metric: {} Best metric: {}".format(
+                lr, p, r, f1, iou, oa, round(refer_metric.mean(), 5), round(best_metric, 5)))
         with open(self.result_save_path, "a")as f:
             row = [
                 str(int(epoch)),
@@ -294,7 +293,7 @@ class SaveResult:
                 f"{float(p.mean()):.6f}",
                 f"{float(r.mean()):.6f}",
                 f"{float(f1.mean()):.6f}",
-                f"{float(miou.mean()):.6f}",
+                f"{float(iou.mean()):.6f}",
                 f"{float(oa.mean()):.6f}",
                 f"{float(best_metric):.6f}",
                 f"{float(train_avg_loss):.6f}",

@@ -207,7 +207,7 @@ def train(opt):
 
         scheduler.step()
         dropblock_step(model)
-        p, r, f1, miou, oa, val_avg_loss = eval_for_metric(
+        p, r, f1, iou, oa, val_avg_loss = eval_for_metric(
             model,
             val_loader,
             val_criterion,
@@ -226,7 +226,7 @@ def train(opt):
             best_metric = refer_metric.mean()
 
         lr = optimizer.state_dict()['param_groups'][0]['lr']
-        save_results.show(p, r, f1, miou, oa, refer_metric, best_metric, train_avg_loss, val_avg_loss, lr, epoch, train_dis_loss)
+        save_results.show(p, r, f1, iou, oa, refer_metric, best_metric, train_avg_loss, val_avg_loss, lr, epoch, train_dis_loss)
 
     return best_ckp_file
 

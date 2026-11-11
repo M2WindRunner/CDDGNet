@@ -7,7 +7,7 @@ import torchvision.transforms as T
 from models.main_model import EnsembleModel
 from utils.dataloaders import get_eval_loaders
 from utils.dataloaders import load_normalization_statistics
-from utils.common import check_eval_dirs, compute_p_r_f1_miou_oa, gpu_info, SaveResult, ScaleInOutput
+from utils.common import check_eval_dirs, compute_p_r_f1_iou_oa, gpu_info, SaveResult, ScaleInOutput
 import torch.nn.functional as F
 import utils.visual as Metrics
 import cv2
@@ -49,7 +49,7 @@ def eval(opt):
         opt.dual_label = True
     eval_loader = get_eval_loaders(opt)
 
-    p, r, f1, miou, oa, avg_loss = eval_for_metric(
+    p, r, f1, iou, oa, avg_loss = eval_for_metric(
         model,
         eval_loader,
         tta=opt.tta,
@@ -58,9 +58,9 @@ def eval(opt):
         save_visuals=opt.save_visuals,
     )
 
-    save_results.show(p, r, f1, miou, oa)
+    save_results.show(p, r, f1, iou, oa)
     print("F1-mean: {}".format(f1.mean()))
-    print("mIOU-mean: {}".format(miou.mean()))
+    print("IoU-mean: {}".format(iou.mean()))
 
 
 def eval_for_metric(model, eval_loader, criterion=None, tta=False, input_size=256, dataset_name="eval", save_visuals=False):
@@ -189,9 +189,9 @@ def eval_for_metric(model, eval_loader, criterion=None, tta=False, input_size=25
 
                 current_step += 1
 
-    p, r, f1, miou, oa = compute_p_r_f1_miou_oa(tn_fp_fn_tp)
+    p, r, f1, iou, oa = compute_p_r_f1_iou_oa(tn_fp_fn_tp)
 
-    return p, r, f1, miou, oa, avg_loss
+    return p, r, f1, iou, oa, avg_loss
 
 
 if __name__ == "__main__":
